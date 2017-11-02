@@ -40,4 +40,13 @@ public class SortImpl implements Sort {
 
         }
     }
+
+    public void insertTionSort2(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            int e = arr[i];
+            int j; // j保存元素e应该插入的位置
+            for (j = i; j > 0 && arr[j - 1] > e; j--) arr[j] = arr[j - 1];
+            arr[j] = e;
+        }
+    }
 }

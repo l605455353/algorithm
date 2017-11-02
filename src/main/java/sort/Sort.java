@@ -12,4 +12,10 @@ public interface Sort {
      * @param arr
      */
     void insertionSort(int arr[]);
+
+    /**
+     * 插入排序优化
+     * @param arr
+     */
+    void insertTionSort2(int arr[]);
 }
