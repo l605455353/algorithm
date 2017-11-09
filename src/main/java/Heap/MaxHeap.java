@@ -15,6 +15,17 @@ public class MaxHeap<Item extends Comparable> {
         this.capacity = capacity;
     }
 
+    public MaxHeap(Item[] arr) {
+        int n = arr.length;
+        capacity= n;
+        data = (Item[]) new Comparable[n + 1];
+        for (int i = 0; i < n; i++) data[i + 1] = arr[i];
+
+        count =n;
+
+        for (int i=count/2;i>=1;i--) shifDown(i);
+    }
+
     // 返回堆中的元素个数
     public int size() {
         return count;
